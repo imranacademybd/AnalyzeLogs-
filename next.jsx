@@ -129,17 +129,75 @@ export default function GooglebotAnalyzerLayout() {
         </div>
       </section>
 
-      {/* Content Section */}
-      <section id="content" className="bg-gray-50 p-6 sm:p-12 flex flex-col items-center gap-6">
-        <h3 className="text-3xl font-bold mb-6">Additional Content & Documentation</h3>
-        <p className="max-w-3xl text-center text-gray-700">Here you can add user guides, screenshots, FAQs, or any explanatory content to help users understand the tool better. You can also link to blog posts, tutorials, or other analytics resources.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-          <div className="p-4 bg-white shadow rounded-xl">Content Block 1</div>
-          <div className="p-4 bg-white shadow rounded-xl">Content Block 2</div>
-          <div className="p-4 bg-white shadow rounded-xl">Content Block 3</div>
-          <div className="p-4 bg-white shadow rounded-xl">Content Block 4</div>
+export default function AdditionalContentDocumentation() {
+  return (
+    <section className="additional-content py-16 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+      <div className="max-w-6xl mx-auto">
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6 tracking-tight">
+          📘 Additional Content & Documentation
+        </h2>
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+          All essential resources, explanations, and technical documentation for understanding your Log Analyzer Tool.
+        </p>
+
+        {/* Documentation Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Block 1 */}
+          <div className="p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">📄 Tool Overview</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              A complete breakdown of how the log analyzer collects, processes, and visualizes crawl data with high accuracy.
+            </p>
+          </div>
+
+          {/* Block 2 */}
+          <div className="p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">⚙️ How Metrics Work</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Explanation of all metrics including Page Type, Sitemap URLs, Crawl Hits, Avg Hits, Orphan Pages, Waste Patterns.
+            </p>
+          </div>
+
+          {/* Block 3 */}
+          <div className="p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">📊 Using Charts & Filters</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Learn how to use date-range filters, bot comparison charts, and export tools for deep technical insights.
+            </p>
+          </div>
+
+          {/* Block 4 */}
+          <div className="p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">🔍 Troubleshooting Guide</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Fix common issues: missing logs, invalid formats, bot detection errors, incorrect timestamps, and more.
+            </p>
+          </div>
+
+          {/* Block 5 */}
+          <div className="p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">📥 Data Import Rules</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Supported formats, file-size limits, merge rules, and uploading best practices for accurate reports.
+            </p>
+          </div>
+
+          {/* Block 6 */}
+          <div className="p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">🧩 API & Developer Notes</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Coming soon: API endpoints, webhooks, and integration guides for advanced users and SEOs.
+            </p>
+          </div>
         </div>
-      </section>
+
+        {/* Footer Note */}
+        <div className="text-center mt-12 text-gray-500 text-sm">
+          💡 More detailed documentation sections can be added anytime.
+        </div>
+      </div>
+    </section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white p-6 mt-auto">
