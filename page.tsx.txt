@@ -1,0 +1,13 @@
+// app/page.tsx
+import React from "react";
+
+export default function HomePage() {
+  return (
+    <main style={{ padding: 32, fontFamily: "Inter, sans-serif" }}>
+      <h1 style={{ fontSize: 32, marginBottom: 12 }}>Alokito Googlebot Analyzer</h1>
+      <p style={{ color: "#374151" }}>
+        Welcome — upload logs and analyze. This is a minimal Next.js App Router homepage.
+      </p>
+    </main>
+  );
+}
