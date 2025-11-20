@@ -132,28 +132,30 @@ export default function GooglebotAnalyzerLayout() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 shadow-md flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Googlebot Analyzer</h1>
-        <nav className="space-x-4">
-          <a href="#home" className="hover:underline">Home</a>
-          <a href="#features" className="hover:underline">Features</a>
-          <a href="#metrics" className="hover:underline">Metrics</a>
-          <a href="#content" className="hover:underline">Content</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-        </nav>
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 sm:p-6 shadow-md">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+          <h1 className="text-xl sm:text-2xl font-bold text-center sm:text-left">Googlebot Analyzer</h1>
+          <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
+            <a href="#home" className="hover:underline text-sm sm:text-base px-2 py-1">Home</a>
+            <a href="#features" className="hover:underline text-sm sm:text-base px-2 py-1">Features</a>
+            <a href="#metrics" className="hover:underline text-sm sm:text-base px-2 py-1">Metrics</a>
+            <a href="#content" className="hover:underline text-sm sm:text-base px-2 py-1">Content</a>
+            <a href="#contact" className="hover:underline text-sm sm:text-base px-2 py-1">Contact</a>
+          </nav>
+        </div>
       </header>
 
       {/* Home/Hero Section */}
-      <section id="home" className="bg-gray-50 flex flex-col items-center justify-center text-center p-12">
-        <h2 className="text-4xl font-bold mb-4">Analyze Your Googlebot Logs Instantly</h2>
-        <p className="text-gray-700 mb-6 max-w-xl">Upload your log files and get detailed crawl metrics, top URLs, CSV export, and more.</p>
-        <button onClick={() => fileInputRef.current?.click()} className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition mb-4">Upload & Analyze Now</button>
+      <section id="home" className="bg-gray-50 flex flex-col items-center justify-center text-center p-6 sm:p-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Analyze Your Googlebot Logs Instantly</h2>
+        <p className="text-gray-700 mb-6 max-w-xl text-sm sm:text-base px-4">Upload your log files and get detailed crawl metrics, top URLs, CSV export, and more.</p>
+        <button onClick={() => fileInputRef.current?.click()} className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition mb-4 text-sm sm:text-base">Upload & Analyze Now</button>
         <input ref={fileInputRef} type="file" multiple className="hidden" onChange={e=>handleFiles(e.target.files)} />
       </section>
 
       {/* Metrics Section */}
-      <section id="metrics" className="p-6 sm:p-12 bg-white flex flex-col gap-6">
-        <h3 className="text-3xl font-bold text-center mb-6">Crawl Metrics</h3>
+      <section id="metrics" className="p-4 sm:p-6 md:p-12 bg-white flex flex-col gap-6">
+        <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6">Crawl Metrics</h3>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
           <div className="p-4 bg-green-100 rounded-xl shadow-md text-center">Total Lines<br/><span className="text-2xl font-bold text-green-800">{summary.totalLines}</span></div>
           <div className="p-4 bg-blue-100 rounded-xl shadow-md text-center">Total Unique URLs<br/><span className="text-2xl font-bold text-blue-800">{summary.uniqueUrls}</span></div>
@@ -171,7 +173,7 @@ export default function GooglebotAnalyzerLayout() {
           <div className="p-4 bg-indigo-50 rounded-xl shadow-md text-center">Desktop Visits<br/><span className="text-2xl font-bold text-indigo-800">{summary.desktop}</span></div>
         </div>
         <div className="mt-6 flex justify-center">
-          <button onClick={downloadCSV} className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition">Download CSV / Export Excel</button>
+          <button onClick={downloadCSV} className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition text-sm sm:text-base">Download CSV / Export Excel</button>
         </div>
       </section>
 
@@ -245,9 +247,9 @@ export default function GooglebotAnalyzerLayout() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white p-6 mt-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p>
+      <footer className="bg-gray-800 text-white p-4 sm:p-6 mt-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+          <p className="text-center sm:text-left text-sm sm:text-base">
             © 2025&nbsp;
             <a 
               href="https://imranseo.com/" 
@@ -259,12 +261,12 @@ export default function GooglebotAnalyzerLayout() {
             </a>
             . All rights reserved.
           </p>
-          <div className="space-x-4 mt-2 sm:mt-0">
-            <a href="#home" className="hover:underline">Home</a>
-            <a href="#features" className="hover:underline">Features</a>
-            <a href="#metrics" className="hover:underline">Metrics</a>
-            <a href="#content" className="hover:underline">Content</a>
-            <a href="#contact" className="hover:underline">Contact</a>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+            <a href="#home" className="hover:underline text-sm sm:text-base px-2 py-1">Home</a>
+            <a href="#features" className="hover:underline text-sm sm:text-base px-2 py-1">Features</a>
+            <a href="#metrics" className="hover:underline text-sm sm:text-base px-2 py-1">Metrics</a>
+            <a href="#content" className="hover:underline text-sm sm:text-base px-2 py-1">Content</a>
+            <a href="#contact" className="hover:underline text-sm sm:text-base px-2 py-1">Contact</a>
           </div>
         </div>
       </footer>
